@@ -1,15 +1,13 @@
-# fly.toml app configuration file for webstie
-# Updated to the current Fly Launch schema (the previous 2022 format used a
-# deprecated [[services.ports]] structure the launch manifest parser rejects).
+# fly.toml app configuration file for something-4kwvca
 # See https://fly.io/docs/reference/configuration/
 
-app = "webstie"
+app = "something-4kwvca"
 primary_region = "iad"
 
 [build]
 
 [http_service]
-  internal_port = 80
+  internal_port = 3000
   force_https = true
   auto_stop_machines = "stop"
   auto_start_machines = true
