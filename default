@@ -12,6 +12,8 @@ events {
 
 http {
     server {
+        listen 3000;
+        listen [::]:3000;
         listen 80;
         listen [::]:80;
         location / {
@@ -31,11 +33,7 @@ http {
     access_log  /var/log/nginx/access.log  main;
 
     sendfile        on;
-    #tcp_nopush     on;
-
     keepalive_timeout  65;
-
-    #gzip  on;
 
     include /etc/nginx/conf.d/*.conf;
 }
